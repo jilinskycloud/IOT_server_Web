@@ -1,0 +1,207 @@
+<include file="public@header"/>
+<body>
+<style>
+    .hhhj {
+        background-color: #ecf0f1;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding-left: 20px;
+        font-family: "微软雅黑";
+        font-size: 16px;
+        color: #000;
+        line-height: 40px;
+        border-bottom: 1px #ddd solid;
+        border-top: 1px #ddd solid;
+        margin-bottom: 10px;
+    }
+
+    .title_p {
+        background-color: #ecf0f1;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding-left: 20px;
+        font-family: "微软雅黑";
+        font-size: 16px;
+        color: #000;
+        line-height: 40px;
+        border-bottom: 1px #ddd solid;
+        border-top: 1px #ddd solid;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="">网关列表</a></li>
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('Iot/cellGates')}">
+        网关id:
+        <input type="text" class="form-control" name="gw_id" value="" style="width: 150px;" placeholder="网关id">
+        <input type="submit" id="search" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('Iot/cellGates')}">清空</a>
+    </form>
+
+    <form class="form-horizontal" role="form">
+        <fieldset>
+            <div class="tabbable">
+                <div class="tab-content">
+                    <div class="clear"></div>
+                    <div style="clear:both"></div>
+                    <div class="tab-pane active" id="A">
+                        <!-- 			<div class="title_p">有效信标数(1000)</div> -->
+                        <div class="ovul">
+                            <foreach name="list" item="vm">
+                                <if condition="$vm['status']">
+                                    <div class="content beacon"
+                                         style="background-color: lightseagreen; cursor:pointer;">
+                                        <span class="beacon-child">{$vm.gw_id}</span>
+                                        <span class="beacon-child">{$vm.update_time_date}</span>
+										<div class="do-div">
+											<a class="btn btn-xs btn-primary beacon-child"
+											   href="{:url('gateEdit',['gw_id' => $vm.gw_id])}">网关设置</a>
+											<br/>
+											<a class="btn btn-xs btn-primary beacon-child"
+											   href="{:url('gateDownload',['gw_id' => $vm.gw_id])}">log文件下载</a>
+											<br/>
+											<a class="btn btn-xs btn-primary beacon-child"
+											   href="{:url('gateDownlist',['gw_id' => $vm.gw_id])}">log文件列表</a>
+
+										</div>
+
+                                    </div>
+                                    <else/>
+                                    <div class="content beacon" style="background-color:LightSalmon; cursor:pointer;">
+                                        <span class="beacon-child">{$vm.gw_id}</span>
+                                        <span class="beacon-child">{$vm.update_time_date}</span>
+
+										<div class="do-div">
+											<a class="btn btn-xs btn-primary beacon-child"
+											   href="{:url('gateEdit',['gw_id' => $vm.gw_id])}">网关设置</a>
+											<br/>
+											<a class="btn btn-xs btn-primary beacon-child"
+											   href="{:url('gateDownload',['gw_id' => $vm.gw_id])}">log文件下载</a>
+											<br/>
+											<a class="btn btn-xs btn-primary beacon-child"
+											   href="{:url('gateDownlist',['gw_id' => $vm.gw_id])}">log文件列表</a>
+
+										</div>
+
+                                    </div>
+                                </if>
+
+                            </foreach>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <style>
+        .content_wx {
+            color: #ffffff;
+            padding: 5px;
+            width: 13.65%;
+            float: left;
+            height: 84px;
+            background-color: #18BC9C;
+            margin-right: 0.58%;
+            margin-bottom: 10px;
+            border: 1px #ddd solid;
+            border-radius: 5px;
+        }
+
+        .content_wx p {
+            width: 95%;
+            float: left;
+            height: 30px;
+            text-align: center;
+            line-height: 45px;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .content_wx span {
+            display: block;
+            width: 95%;
+            float: left;
+            height: 26px;
+            text-align: center;
+            line-height: 17px;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .ovul_sn {
+            width: 101%;
+            overflow: hidden;
+        }
+
+        .ovul {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .content_id {
+            width: 5%;
+            height: 84px;
+            float: left;
+            color: #eee;
+        }
+
+        .content {
+            color: #ffffff;
+            padding: 25px;
+            width: 17.5%;
+            float: left;
+            height: 100%;
+            background-color: #18BC9C;
+            margin-right: 0.58%;
+            margin-bottom: 10px;
+            border: 1px #ddd solid;
+            border-radius: 5px;
+        }
+
+        .content p {
+            width: 95%;
+            float: left;
+            height: 30px;
+            text-align: center;
+            line-height: 45px;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .content span {
+            display: block;
+            width: 100%;
+            float: left;
+            /*height: 26px;*/
+            text-align: center;
+            line-height: 17px;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            border-radius: 5px;
+        }
+		.beacon .beacon-child{
+
+			margin-bottom: 10px;
+		}
+		.do-div{
+			text-align: center;
+		}
+
+
+    </style>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

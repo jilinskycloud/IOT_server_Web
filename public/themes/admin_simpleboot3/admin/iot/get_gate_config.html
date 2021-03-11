@@ -1,0 +1,84 @@
+<include file="public@header"/>
+</head>
+<style>
+
+    .gate-sn-id{
+
+        text-align: left;
+        display: block;
+        line-height: normal;
+        height: auto;
+        margin-top: 5px;
+    }
+</style>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('iot/iotlist')}">温度服务监测</a></li>
+        <li class="active"><a>传感器配置</a></li>
+    </ul>
+    <form class="form-horizontal js-ajax-form margin-top-20" action="{:url('setGateConfig')}" method="post">
+
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>网关序列号:</label>
+            <div class="col-md-6 col-sm-10">
+                <span class="gate-sn-id">{$gw_id}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>传感器ID:</label>
+            <div class="col-md-6 col-sm-10">
+                <span class="gate-sn-id">{$sn_id}</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>传感器服务类型</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control"  name="ST" value="{$gate.ST ?? 'temperature'}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>心跳API地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" name="hb_api_address" value="{$gate.hb_api_address ?? 'http://xy.cenwei.net:2980/api.php/admin/iot/hbMonitor'}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>DataAPI地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control"  name="data_api_address" value="{$gate.data_api_address ?? 'http://xy.cenwei.net:2980/api.php/admin/iot/saveMonitor'}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>心跳发送间隔时间(单位：分钟)</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" name="hb_interval" value="{$gate.hb_interval ?? '1'}">
+            </div>
+        </div>
+        <div class="form-group">
+        <label  class="col-sm-2 control-label"><span class="form-required">*</span>Data发送间隔时间(单位：分钟)</label>
+        <div class="col-md-6 col-sm-10">
+            <input type="text" class="form-control" name="data_interval" value="{$gate.data_interval ?? '30'}">
+        </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>版本</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" name="version" value="{$gate.version ?? '001'}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="hidden" name="gw_id" value="{$gw_id}"/>
+                <input type="hidden" name="sn_id" value="{$sn_id}"/>
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+                <a class="btn btn-default" href="{:url('iot/iotlist')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

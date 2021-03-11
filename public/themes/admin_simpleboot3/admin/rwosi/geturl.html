@@ -1,0 +1,230 @@
+<include file="public@header" />
+
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width:760px;
+		height:350px;
+		background:#fff;
+		margin:27px ;
+	}
+	.box .head span{
+		font-size:18px;
+		color:#333;
+	}
+	.box .head{
+		margin-bottom:20px;
+	}
+	.box .head a{
+		text-decoration:none;
+		float:right;
+		font-size:15px;
+		color:#333;
+	}
+	.box .head a:hover{
+		color:#F00;
+	}
+	.box ul li{
+		width:160px;
+		height:150px;
+		list-style:none;
+		position:relative;
+		float:left;
+		margin-left:20px;
+		margin-bottom:20px;
+		overflow:hidden;
+	}
+	.box ul li .deatil{
+		width:160px;
+		height:240px;
+		background:rgba(0,0,0,0.7);
+		position:absolute;
+		top:-240px;
+		-webkit-transition:all 0.3s ease;<!--适应ie，谷歌，苹果浏览器内核-->
+	-o-transition:all 0.3s ease;<!--适应Opera浏览器内核-->
+	-moz-transition:all 0.3s ease;<!--火狐浏览器-->
+	-ms-transition:all 0.3s ease;<!--微软-->
+	}
+
+	.box ul li .deatil h2{
+		font-size:18px;
+		color:#fff;
+		text-align:center;
+		padding-top:30px;
+	}
+	.box ul li .deatil p{
+		font-size:16px;
+		text-align:center;
+		margin:30px;
+		color:#fff;
+	}
+	.box ul li .deatil a{
+		font-size:15px;
+		display:block;
+		color:#fff;
+		background-color:#F00;
+		text-decoration:none;
+		width:100px;
+		height:40px;
+		text-align:center;
+		line-height:40px;
+		margin:0 auto;
+	}
+	.box ul li:hover .deatil{
+		top:0;
+	}
+.xj{
+	color: #ff0000;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/Calendar.css" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('rwosi/rwlist')}">任务管理</a></li>
+			<!--<li class="active"><a href="{:url('xmosi/xmadd')}">添加</a></li>-->
+		</ul>
+		<video id="video" src="https://192.168.1.111:81/videocallTest.html?isCall=1&mId=11&callId=2"></video>
+		<form method="post" action="{:url('rwosi/rwgetiteminfo')}" id="xqform">
+			<input type="hidden" name="times" id="times" >
+			<input type="hidden" name="itemid" id="itemid" >
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+<script>
+//	$(function(){
+//		$(".jhtimes").bind('click',function(i){
+//			var html=$(this).html();
+//			if($(".xzsj").text()!=''){
+//				if($(".xzsj").text()!=html){
+//					$(".xzsj").remove();
+//					var str='<th width="40" align="left" class="xzsj">选择时间</th>';
+//					$("#trlist").find('th').eq(2).after(str)
+//				}
+//			}else{
+//				var str='<th width="40" align="left" class="xzsj">选择时间</th>';
+//				$("#trlist").find('th').eq(2).after(str)
+//			}
+//			$(".tdlist").each(function(i){
+//				if($(".xzsj1").text()!=''){
+//					if($(".xzsj1").eq(i).text()!=html){
+//						if($(".xzsj1").eq(0).text()!=html){
+//							$(".xzsj1").remove();
+//						}
+//						var str1='<td class="xzsj1">'+html+'</td>';
+//						$(this).find('td').eq(2).after(str1)
+//					}
+//				}else{
+//				var str1='<td class="xzsj1">'+html+'</td>';
+//				$(this).find('td').eq(2).after(str1)
+//			}
+//				var a=$(".xzsj1").eq(0).text();
+//				$("#times").val(a);
+//			});
+//		})
+//	});
+	function xq(i){
+		if($("#times").val()==''){
+			alert("请选择执行日期");
+			return false;
+		}
+		$("#itemid").val(i);
+		$("#xqform").submit();
+//		$.ajax({
+//			url: "{:url('rwosi/rwgetiteminfo')}",
+//			type: 'post',
+//			async: false,
+//			data: 'itemid='+i+'&time='+$("#times").val(),
+//			success: function (data) {
+//			}
+//
+//		});
+	}
+</script>
+	<script src="__STATIC__/js/rljs/jquery.min.js"></script>
+	<script src="__STATIC__/js/rljs/calendar.js"></script>
+<!--<script>-->
+	<!--navigator.getUserMedia ||-->
+	<!--(navigator.getUserMedia = navigator.mozGetUserMedia ||  navigator.webkitGetUserMedia || navigator.msGetUserMedia);-->
+
+	<!--if (navigator.getUserMedia) {-->
+		<!--navigator.getUserMedia({-->
+			<!--video: true,-->
+			<!--audio: true-->
+		<!--}, onSuccess);-->
+		<!--//do something-->
+	<!--} else {-->
+		<!--console.log('your browser not support getUserMedia');-->
+	<!--}-->
+	<!--function onSuccess(stream) {-->
+
+		<!--var video = document.getElementById('webcam');-->
+		<!--if (window.URL) {-->
+			<!--video.src = window.URL.createObjectURL(stream);-->
+		<!--} else {-->
+			<!--video.src = stream;-->
+		<!--}-->
+
+		<!--video.autoplay = true;-->
+		<!--//or video.play();-->
+	<!--}-->
+
+<!--</script>-->
+<!--<script>-->
+	<!--//访问用户媒体设备的兼容方法-->
+	<!--function getUserMedia(constrains,success,error){-->
+		<!--if(navigator.mediaDevices.getUserMedia){-->
+			<!--//最新标准API-->
+			<!--navigator.mediaDevices.getUserMedia(constrains).then(success).catch(error);-->
+		<!--} else if (navigator.webkitGetUserMedia){-->
+			<!--//webkit内核浏览器-->
+			<!--navigator.webkitGetUserMedia(constrains).then(success).catch(error);-->
+		<!--} else if (navigator.mozGetUserMedia){-->
+			<!--//Firefox浏览器-->
+			<!--navagator.mozGetUserMedia(constrains).then(success).catch(error);-->
+		<!--} else if (navigator.getUserMedia){-->
+			<!--//旧版API-->
+			<!--navigator.getUserMedia(constrains).then(success).catch(error);-->
+		<!--}-->
+	<!--}-->
+
+	<!--var video = document.getElementById("video");-->
+	<!--var canvas = document.getElementById("canvas");-->
+<!--//	var context = canvas.getContext("2d");-->
+
+	<!--//成功的回调函数-->
+	<!--function success(stream){-->
+		<!--//兼容webkit内核浏览器-->
+		<!--var CompatibleURL = window.URL || window.webkitURL;-->
+		<!--video.src =video.srcObject = stream;-->
+		<!--//将视频流设置为video元素的源-->
+<!--//		video.src = CompatibleURL.createObjectURL(stream);   // 此处的代码将会报错  解决的办法是将video的srcObject属性指向stream即可-->
+		<!--//播放视频-->
+		<!--video.play();-->
+	<!--}-->
+
+	<!--//异常的回调函数-->
+	<!--function error(error){-->
+		<!--console.log("访问用户媒体设备失败：",error.name,error.message);-->
+	<!--}-->
+	<!--if (navigator.mediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia){-->
+		<!--//调用用户媒体设备，访问摄像头-->
+		<!--getUserMedia({-->
+			<!--video:{width:480,height:320}-->
+		<!--},success,error);-->
+	<!--} else {-->
+		<!--alert("你的浏览器不支持访问用户媒体设备");-->
+	<!--}-->
+
+	<!--//注册拍照按钮的单击事件-->
+	<!--document.getElementById("capture").addEventListener("click",function(){-->
+		<!--//绘制画面-->
+		<!--context.drawImage(video,0,0,480,320);-->
+	<!--});-->
+<!--</script>-->
+</body>
+</html>

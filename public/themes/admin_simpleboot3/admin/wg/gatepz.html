@@ -1,0 +1,78 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('wg/getsensorlist')}">网关列表</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('wg/gateeditPost')}">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">心跳开关</label>
+				<div class="col-md-6 col-sm-10">
+					<label class="radio-inline">
+						<php>$active_true_checked=($user['hb_status']==1)?"checked":"";</php>
+						<input type="radio" name="hb_status" {$active_true_checked} value="1">开
+					</label>
+					<label class="radio-inline">
+						<php>$active_true_checked=($user['hb_status']==0)?"checked":"";</php>
+						<input type="radio" name="hb_status" value="0" {$active_true_checked}> 关
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">数据开关</label>
+				<div class="col-md-6 col-sm-10">
+					<label class="radio-inline">
+						<php>$active_true_checked1=($user['data_status']==1)?"checked":"";</php>
+						<input type="radio" name="data_status"  value="1" {$active_true_checked1}>开
+					</label>
+					<label class="radio-inline">
+						<php>$active_true_checked1=($user['data_status']==0)?"checked":"";</php>
+						<input type="radio" name="data_status" value="0" {$active_true_checked1}> 关
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>重启时间</label>
+				<input type="text" class="layui-input form-control" name="reboot_time" id="test1"  value="{:input('request.select_start_time/s',$user.reboot_time)}" placeholder="请选择生效日期" style=" width:300px" autocomplete="off">
+			</div>
+
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>KEY</label>
+				<input type="text" class="layui-input form-control" name="data_key" placeholder="KEY" style=" width:300px" autocomplete="off" value="{$user['data_key']}">
+			</div>
+
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>心跳地址</label>
+				<input type="text" class="layui-input form-control" name="heartbeat_url" placeholder="心跳地址" style=" width:300px" autocomplete="off" value="{$user['heartbeat_url']}">
+			</div>
+
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>NETCAT地址</label>
+				<input type="text" class="layui-input form-control" name="natcat_url" placeholder="NETCAT地址" style=" width:300px" autocomplete="off" value="{$user['natcat_url']}">
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>日志地址</label>
+				<input type="text" class="layui-input form-control" name="log_url" placeholder="日志地址" style=" width:300px" autocomplete="off" value="{$user['log_url']}">
+			</div>
+
+
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script>
+		laydate.render({
+			elem: '#test1',
+			type: 'time'
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('iot/cellGates')}">网关单元格</a></li>
+        <li class="active"><a>网关配置</a></li>
+    </ul>
+    <form class="form-horizontal js-ajax-form margin-top-20" action="{:url('sendGateStatus')}" method="post">
+        <div class="form-group">
+            <a class="btn btn-warning" href="{:url('addGateTime',['gw_id' => $gate.gw_id])}">添 加</a>
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>网关重启时间:</label>
+        </div>
+            <div class="form-group" style="padding-left: 10%">
+            <table class="table table-hover table-bordered table-list" style="width: 50%">
+                <thead>
+                <tr>
+                    <th>时间点</th>
+                    <th>类型</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <foreach name="times" item="vo">
+                    <tr>
+                        <td>{$vo.time_point}</td>
+                        <td>{$vo.time_type}</td>
+                        <td>
+                            <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('delGateTime',['id' => $vo.id])}">删 除</a>
+                        </td>
+                    </tr>
+                </foreach>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>网关心跳开关</label>
+            <input type="radio"  name="hbeat_status" value="1" <if condition="$gate.hbeat_status eq 1">checked</if> />开启
+            <input type="radio"  name="hbeat_status" value="0" <if condition="$gate.hbeat_status eq 0">checked</if> />关闭
+
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>网关数据传输开关</label>
+            <input type="radio"  name="pdata_status" value="1" <if condition="$gate.pdata_status eq 1">checked</if> />开启
+            <input type="radio"  name="pdata_status" value="0" <if condition="$gate.pdata_status eq 0">checked</if> />关闭
+
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="hidden" name="gw_id" value="{$gate.gw_id}"/>
+                <button type="submit" class="btn btn-primary js-ajax-submit">保存并发送</button>
+                <a class="btn btn-default" href="{:url('iot/cellGates')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('wg/getsensorlist')}">传感器列表</a></li>
+			<li class="active"><a href="{:url('wg/not_configured_getsensorlist')}">未配置传感器列表</a></li>
+		</ul>
+		<form action="#" method="post" class="margin-top-20">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="20">ID</th>
+						<th align="left">网管序列号</th>
+						<th align="left">传感器id</th>
+
+						<th width="100">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="data" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.gw_id}</td>
+						<td>{$vo.sn_id}</td>
+	
+						<td>
+
+								<a class="btn btn-xs btn-primary" href="{:url('wg/pz',array('id'=>$vo['id']))}">配置</a>
+								<a class="btn btn-xs btn-danger js-ajax-delete" class="" href="{:url('fjdel',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="footer">
+				<div class="pagination">{$page|default=''}</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script>
+		function myrefresh()
+		{
+			window.location.reload();
+		}
+		setTimeout('myrefresh()',1000*15); //指定1秒刷新一次
+
+
+	</script>
+</body>
+
+</html>

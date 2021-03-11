@@ -1,0 +1,39 @@
+<include file="public@header" />
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hello, World</title>
+	<style type="text/css">
+		html{height:80%}
+		body{height:80%;width:70%;margin:0px;padding:0px}
+		#container{height:100%}
+	</style>
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=B67f34892474f0537c864d8ccae71b9f">
+	</script>
+</head>
+
+<body>
+<div class="wrap">
+<ul class="nav nav-tabs">
+<li><a href="{:url('rwosi/dtinfo')}">任务轨迹</a></li>
+</ul>
+</div>
+<div id="container"></div>
+<script type="text/javascript">
+	var map = new BMapGL.Map("container");
+	map.centerAndZoom(new BMapGL.Point(125.313642427,43.8983376071), 12);
+    var json='[{"j":"125.414076","w":"43.904238"},{"j":"125.382456","w":"43.874093"},{"j":"125.370957","w":"43.936238"}]';
+//	var json='{$json}';
+	 json=JSON.parse(json);
+	var polylinePointsArray = [];
+	$.each(json,function(i,item){
+		var marker = new BMapGL.Marker(new BMapGL.Point(item.j, item.w));
+		map.addOverlay(marker);
+//		polylinePointsArray[i] = new BMapGL.Point(item.j, item.w);
+	});
+	var polyline = new BMapGL.Polyline(polylinePointsArray, {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+	map.addOverlay(polyline);
+	map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+</script>
+</body>
+</html>

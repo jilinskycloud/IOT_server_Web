@@ -1,0 +1,13 @@
+{
+  "name": "thinkcmf/api-mobile",
+  "description": "ThinkCMF mobile api",
+  "type": "cmf-api",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zhaojinsheng",
+      "email": "123844231@qq.com"
+    }
+  ],
+  "require": {}
+}

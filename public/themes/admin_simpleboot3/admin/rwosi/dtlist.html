@@ -1,0 +1,215 @@
+<include file="public@header" />
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hello, World</title>
+	<style type="text/css">
+		html{height:100%}
+		body{height:100%;width:100%;margin:0px;padding:0px}
+		#container{height:80%}
+	</style>
+	<!--<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=B67f34892474f0537c864d8ccae71b9f">-->
+		<!---->
+	<!--</script>-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=k8p4kMQS5DzplyZ5Ujwu8D1GfmDbbqBf"></script>
+<script src="__STATIC__/js/laydate.js"></script>
+</head>
+
+<body>
+<div class="wrap" style="
+    padding-bottom: 20px;">
+<!--<ul class="nav nav-tabs">-->
+<!--<li><a href="{:url('rwosi/dtinfo')}">任务轨迹</a></li>-->
+<!--</ul>-->
+</div>
+<div id="container"></div>
+<form class="well form-inline" method="post" action="{:url('rwosi/dtlist')}" id="tjform">
+	<!--<input type="text" class="form-control" name="rwstr" value="{$str}" style="width: 150px;" placeholder="搜索条件">-->
+	<select name="planinfoid" style="width: 150px">
+		<option value="0">选择网关</option>
+		<foreach name="wglist" item="vo">
+			<option value="{$vo.wg}"  <if condition="$vo.wg eq $planinfoid">selected = "selected"</if>>{$vo.wg}</option>
+		</foreach>
+	</select>
+	请选择开始时间:<input type="text" class="layui-input form-control" name="select_start_time" id="test1"  value="{:input('request.select_start_time/s','')}" placeholder="请选择开始时间" style=" width:300px" autocomplete="off">
+	请选择结束时间:<input type="text" class="layui-input form-control" name="select_end_time" id="test2"  value="{:input('request.select_end_time/s','')}" placeholder="请选择结束时间" style=" width:300px" autocomplete="off">
+	<input type="button" id="search" class="btn btn-primary" value="搜索"/>
+	<a class="btn btn-danger" href="{:url('rwosi/dtlist')}">清空</a>
+</form>
+<script>
+	laydate.render({
+		elem: '#test1',
+		type: 'datetime'
+	});
+
+	laydate.render({
+		elem: '#test2'
+		,type: 'datetime'
+		,ready: function(date){
+			$(".layui-laydate-footer [lay-type='datetime'].laydate-btns-time").click();
+			$(".laydate-main-list-0 .layui-laydate-content li ol li:last-child").click();
+			$(".layui-laydate-footer [lay-type='date'].laydate-btns-time").click();
+		}
+	});
+	$(function(){
+		$("#search").bind('click',function(){
+			if($("#test1").val()==''){
+				alert("请输入起始日期");
+				return false;
+			}
+			if($("#test2").val()==''){
+				alert("请输入结束日期");
+				return false;
+			}
+			$("#tjform").submit();
+		})
+	})
+</script>
+<script src="http://mapopen.bj.bcebos.com/github/BMapGLLib/TrackAnimation/src/TrackAnimation.min.js"></script>
+<script type="text/javascript">
+	var map = new BMap.Map("container");
+	var x = 125.313642427;
+	var y = 43.8983376071;
+	var ggPoint = new BMap.Point(x,y);
+	var dw='{$dw}';
+//    var json='[{"j":"125.414076","w":"43.904238"},{"j":"125.382456","w":"43.874093"},{"j":"125.370957","w":"43.936238"}]';
+	var json='{$json}';
+	var fj='{$fjarr}';
+	 json=JSON.parse(json);
+	 fj=JSON.parse(fj);
+	//插入风机
+	//坐标转换完之后的回调函数
+	var myIcon = new BMap.Icon("__STATIC__/images/fj1.jpg", new BMap.Size(52, 26));
+	// 创建Marker标注，使用小车图标
+	$.each(fj,function(i,item) {
+
+		var pointArr = [];
+		var pt = new BMap.Point(item.longitude, item.latitude);
+		pointArr.push(pt);
+		//转换百度坐标
+
+//		translateCallback = function (data){
+//			if(data.status === 0) {
+//				var marker = new BMap.Marker(data.points[0], {
+		var marker = new BMap.Marker(pt, {
+					icon: myIcon
+				});
+				map.addOverlay(marker);
+				var label = new BMap.Label(item.name, {offset: new BMap.Size(10, -20)});
+				label.setStyle(
+						{
+							position: 'relative'
+
+						}
+				);
+				marker.setLabel(label);
+//			}
+//		};
+//
+//		var convertor = new BMap.Convertor();
+//		var pointArr = [];
+//		var pt = new BMap.Point(item.longitude, item.latitude);
+//		pointArr.push(pt);
+//		convertor.translate(pointArr, 3, 5, translateCallback);
+
+	});
+
+//	========
+	var polylinePointsArray = [];
+	var marklist=[];
+	var pointgj = [];
+	var sy = new BMap.Symbol(BMap_Symbol_SHAPE_BACKWARD_OPEN_ARROW, {
+		scale: 0.6,//图标缩放大小
+		strokeColor:'#fff',//设置矢量图标的线填充颜色
+		strokeWeight: '2',//设置线宽
+	});
+	var icons = new BMap.IconSequence(sy, '10', '30');
+	if(json.length==0){		map.centerAndZoom(new BMap.Point(123.4526572239879,43.44585953113816), 14);
+//		console.log(fj[0].name);
+//		map.centerAndZoom(new BMap.Point(fj[0].longitude,fj[0].latitude), 12);
+	}else {
+		if (dw == 1) {
+			map.centerAndZoom(new BMap.Point(json[0].j, json[0].w), 14);
+		} else {
+			map.centerAndZoom(new BMap.Point(json[0].j, json[0].w), 14);
+		}
+
+		$.each(json, function (i, item) {
+			pointgj.push(new BMap.Point(item.j, item.w));
+			var marker = new BMap.Marker(new BMap.Point(item.j, item.w));
+			map.addOverlay(marker);
+//		map.addControl(map);
+			var point = new BMap.Point(item.j, item.w);
+			var label = new BMap.Label(item.name, {offset: new BMap.Size(10, -20)});
+			label.setStyle(
+					{
+						position: 'relative'
+
+					}
+			);
+//			marker.setLabel(label);
+			polylinePointsArray[i] = new BMap.Point(item.j, item.w);
+			addClickHandler(item.content, marker);
+		});
+	}
+	console.log(json);
+   console.log(pointgj);
+	//增加折线方向
+	var polyline =new BMap.Polyline(pointgj, {
+		enableEditing: false,//是否启用线编辑，默认为false
+		enableClicking: true,//是否响应点击事件，默认为true
+		icons:[icons],
+		strokeWeight:'8',//折线的宽度，以像素为单位
+		strokeOpacity: 0.8,//折线的透明度，取值范围0 - 1
+		strokeColor:"#18a45b" //折线颜色
+	});
+	map.addOverlay(polyline);
+//	var polyline = new BMap.Polyline(polylinePointsArray, {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+	map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+	//检索
+	var local = new BMap.LocalSearch(map, {
+		renderOptions:{map: map}
+	});
+//	local.search("hou1");
+//百度坐标转换
+	//坐标转换完之后的回调函数
+//	translateCallback = function (data){
+//		if(data.status === 0) {
+//			var marker = new BMap.Marker(data.point[0]);
+//			bm.addOverlay(marker);
+//			var label = new BMap.Label("转换后的百度坐标（正确）",{offset:new BMap.Size(20,-10)});
+//			marker.setLabel(label); //添加百度label
+//			bm.setCenter(data.point[0]);
+//		}
+//	};
+//
+//	setTimeout(function(){
+//		var convertor = new BMap.Convertor();
+//		var pointArr = [];
+//		pointArr.push(ggPoint);
+//		convertor.translate(pointArr, 1, 5, translateCallback)
+//	}, 1000);
+	var opts = {
+		width : 250,     // 信息窗口宽度
+		height: 120,     // 信息窗口高度
+		title : "信息窗口" , // 信息窗口标题
+		enableMessage:true//设置允许信息窗发送短息
+	};
+	function addClickHandler(content,marker){
+		marker.addEventListener("click",function(e){
+			openInfo(content,e)}
+		);
+	}
+	function openInfo(content,e){
+		var p = e.target;
+		console.log(p.getPosition());
+		var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+		var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
+		map.openInfoWindow(infoWindow,point); //开启信息窗口
+	}
+
+
+
+</script>
+</body>
+</html>

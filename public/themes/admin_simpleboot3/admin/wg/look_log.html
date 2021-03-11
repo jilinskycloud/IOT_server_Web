@@ -1,0 +1,48 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('wg/getgatelist')}">网关列表</a></li>
+		</ul>
+		<form action="{:url('Rbac/listorders')}" method="post" class="margin-top-20">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="20">ID</th>
+						<th align="left">文件名称</th>
+						<th align="left">创建时间</th>
+						<th align="left">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="data" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.file_name}</td>
+						<td>{$vo.create_time}</td>
+						<td>
+							<a class="btn btn-xs btn-primary" href="{:url('wg/gateLogDownload',['id' => $vo.id])}">下载</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="footer">
+				<div class="pagination">{$page|default=''}</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script>
+		function myrefresh()
+		{
+			window.location.reload();
+		}
+		setTimeout('myrefresh()',1000*15); //指定1秒刷新一次
+
+
+	</script>
+</body>
+
+</html>

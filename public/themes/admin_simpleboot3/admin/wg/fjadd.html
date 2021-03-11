@@ -1,0 +1,62 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('fjosi/fjlist')}">风场管理</a></li>
+			<li class="active"><a href="{:url('fjosi/fjadd')}">风场添加</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('fjosi/addpost')}">
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>风场名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login1" name="fcname">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>风场位置</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login2" name="fcaddress">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>风场面积</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login3" name="fcarea">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>风场负责人</label>
+				<div class="col-md-6 col-sm-10">
+					<div class="col-md-6 col-sm-10">
+						<select name="fccharge" style="width:  150px">
+							<foreach name="userlist" item="vo">
+								<option value="{$vo.user_login}">{$vo.user_nickname}</option>
+							</foreach>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>风场投运日期</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="layui-input form-control" name="fccreatetime" id="test1"  value="{:input('request.fccreatetime/s','')}" placeholder="请选择投运日期" style=" width:300px" autocomplete="off">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+<script>
+	laydate.render({
+		elem: '#test1',
+		type: 'datetime'
+	});
+</script>
+</body>
+</html>

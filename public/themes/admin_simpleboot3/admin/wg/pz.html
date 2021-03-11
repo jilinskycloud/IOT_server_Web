@@ -1,0 +1,73 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('wg/getsensorlist')}">传感器列表</a></li>
+			<li class="active"><a>编辑风场</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('wg/editPost')}">
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>网关序列号</label>
+				<input type="hidden" name="gw_id" value="{$user.gw_id}">
+				{$user.gw_id}
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>传感器ID</label>
+				<input type="hidden" name="sn_id" value="{$user.sn_id}">
+				{$user.sn_id}
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>传感器类型</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="ST" value="{$user.ST}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>心跳API地址</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="hb_api_address" value="{$user.hb_api_address}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>DataApi地址</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="data_api_address" value="{$user.data_api_address}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>心跳发送时间间隔</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="hb_interval" value="{$user.hb_interval}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>Data发送时间间隔</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="data_interval" value="{$user.data_interval}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>版本</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="version" value="{$user.version}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script>
+		laydate.render({
+			elem: '#test1',
+			type: 'datetime'
+		});
+	</script>
+</body>
+</html>

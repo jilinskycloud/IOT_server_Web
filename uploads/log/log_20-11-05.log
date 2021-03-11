@@ -1,0 +1,7 @@
+SELECT * FROM `cmf_task_item_info` WHERE  `id` = 48 LIMIT 1
+SELECT * FROM `cmf_task_item_info` WHERE  `id` = 48 LIMIT 1
+接受参数:{"gw_id":"SC-CC20200813-001","sn_list":"['41-B6'],['41-B13']","statuscode":""}
+接受参数:{"gw_id":"SC-CC20200813-001","sn_list":"['41-B6'],['41-B13']","statuscode":""}
+接受参数:{"gw_id":"SC-CC20200813-001","sn_list":"['41-B6'],['41-B13']","statuscode":""}
+接受参数:{"gw_id":"SC-CC20200813-001","sn_list":"['41-B6'],['41-B13']","statuscode":""}
+返回参数:{"code":200,"msg":"sn_rec","data":"","statuscode":""}

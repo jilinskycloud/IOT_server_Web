@@ -1,0 +1,29 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('iot/gateEdit',['gw_id' => $gw_id])}">单元格编辑</a></li>
+        <li class="active"><a>网关重启时间添加</a></li>
+    </ul>
+    <form class="form-horizontal js-ajax-form margin-top-20" action="" method="post">
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>时间点</label>
+            <input type="text"  name="time_point" value="00:00:00"/>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="form-required">*</span>类型</label>
+            <input type="text"  name="time_type" value="reboot" readonly />
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="hidden" name="gw_id" value="{$gw_id}"/>
+                <button type="submit" class="btn btn-primary js-ajax-submit">保存</button>
+                <a class="btn btn-default" href="{:url('iot/gateEdit',['gw_id' => $gw_id])}">{:lang('BACK')}</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

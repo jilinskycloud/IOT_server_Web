@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>华电那木斯风电场.kmz</name>
+	<open>1</open>
+	<Style id="s_ylw-pushpin0000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin100">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_C0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_C0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_C</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl000">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl0000">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_red-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_red-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_red-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin101">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin101</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl1000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_C0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/C.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/C-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sh_C">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/C.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/C-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl11">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_red-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl1000">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_red-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/X-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin101">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>华电那木斯风电场</name>
+		<open>1</open>
+		<Placemark>
+			<name>华电那木斯风电场</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4526572239879</longitude>
+				<latitude>43.44585953113816</latitude>
+				<altitude>0</altitude>
+				<heading>1.295872253342593</heading>
+				<tilt>24.14112500403929</tilt>
+				<range>1405.434141807016</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4524836760519,43.44560432670706,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>双辽测风塔</name>
+			<LookAt>
+				<gx:TimeSpan>
+					<begin>2013-08-30T02:13:23Z</begin>
+					<end>2013-08-30T05:22:34Z</end>
+				</gx:TimeSpan>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4551841940974</longitude>
+				<latitude>43.44467542218165</latitude>
+				<altitude>0</altitude>
+				<heading>1.036604214101743</heading>
+				<tilt>25.61918521108938</tilt>
+				<range>199.0943738638593</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_C0</styleUrl>
+			<Point>
+				<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4554002480669,43.44478434656506,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>23#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4231178040824</longitude>
+				<latitude>43.43535131103765</latitude>
+				<altitude>0</altitude>
+				<heading>1.284059187322463</heading>
+				<tilt>26.20761856679449</tilt>
+				<range>685.9164513435355</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4216223853529,43.43507345554949,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>24#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4215669974857</longitude>
+				<latitude>43.43233007905397</latitude>
+				<altitude>0</altitude>
+				<heading>1.282992779050947</heading>
+				<tilt>26.20838184615696</tilt>
+				<range>915.1427305244855</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4186226753158,43.43223359141037,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>25#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4085258289716</longitude>
+				<latitude>43.42916967068332</latitude>
+				<altitude>0</altitude>
+				<heading>1.290783364646158</heading>
+				<tilt>30.00117640530378</tilt>
+				<range>261.8874180146689</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4081443062355,43.428797783636,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>26#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.407034242601</longitude>
+				<latitude>43.4252994431678</latitude>
+				<altitude>0</altitude>
+				<heading>1.28975280664968</heading>
+				<tilt>30.00135522832432</tilt>
+				<range>418.887396723788</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4064933416518,43.42493873435479,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>27#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4208032634829</longitude>
+				<latitude>43.42772067711008</latitude>
+				<altitude>0</altitude>
+				<heading>1.292079171487658</heading>
+				<tilt>28.48928615805832</tilt>
+				<range>562.7032986820573</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4196774278497,43.42761807638605,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>28#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4173558976231</longitude>
+				<latitude>43.42300468739605</latitude>
+				<altitude>0</altitude>
+				<heading>1.289709285506801</heading>
+				<tilt>28.48892396757207</tilt>
+				<range>560.6555938445383</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4166968408618,43.42238572364558,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>29#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4222956396764</longitude>
+				<latitude>43.41983663422643</latitude>
+				<altitude>0</altitude>
+				<heading>1.293104563839978</heading>
+				<tilt>28.48894849272056</tilt>
+				<range>566.3800425418056</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4226947809067,43.41979071226516,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>30#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4263955702966</longitude>
+				<latitude>43.42271415805671</latitude>
+				<altitude>0</altitude>
+				<heading>1.303062180988851</heading>
+				<tilt>30.00139515627034</tilt>
+				<range>427.7775189907272</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4265023282938,43.42243898663567,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>31#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4058180319874</longitude>
+				<latitude>43.43962300874248</latitude>
+				<altitude>0</altitude>
+				<heading>1.287375691348444</heading>
+				<tilt>30.00150451258247</tilt>
+				<range>452.1143983215786</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4050462524097,43.43915449485995,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>32#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3995010420101</longitude>
+				<latitude>43.43900895223269</latitude>
+				<altitude>0</altitude>
+				<heading>1.283029536130002</heading>
+				<tilt>30.00466013213236</tilt>
+				<range>1194.046534121892</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3983307659765,43.4375814272972,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>33#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3949100310141</longitude>
+				<latitude>43.43759641367734</latitude>
+				<altitude>0</altitude>
+				<heading>1.281400664740493</heading>
+				<tilt>30.0028672378495</tilt>
+				<range>755.6405617757815</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3919199124393,43.43755310097518,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>12#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4027659002764</longitude>
+				<latitude>43.4476499087243</latitude>
+				<altitude>0</altitude>
+				<heading>0.6659053850510991</heading>
+				<tilt>29.28793240247468</tilt>
+				<range>1163.943011839434</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4027701126937,43.44670518831554,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>13#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3987366758989</longitude>
+				<latitude>43.44379984516416</latitude>
+				<altitude>0</altitude>
+				<heading>1.284031984916269</heading>
+				<tilt>30.00288032972065</tilt>
+				<range>758.5553729528287</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3973382729425,43.44299805053472,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>14#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3923078248247</longitude>
+				<latitude>43.44299025992751</latitude>
+				<altitude>0</altitude>
+				<heading>1.279631316582805</heading>
+				<tilt>30.00286902321842</tilt>
+				<range>873.0259060428034</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3915804512251,43.44280486104236,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>15#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3948086989185</longitude>
+				<latitude>43.44793211906882</latitude>
+				<altitude>0</altitude>
+				<heading>1.281330952351038</heading>
+				<tilt>30.00282780313154</tilt>
+				<range>746.8606218678863</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3931643802461,43.44813506632714,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>16#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3896712410672</longitude>
+				<latitude>43.45244114382794</latitude>
+				<altitude>0</altitude>
+				<heading>1.27782870483771</heading>
+				<tilt>30.00175538184856</tilt>
+				<range>390.9223206335144</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3892651874434,43.45220866289033,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>17#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3871645135197</longitude>
+				<latitude>43.449131759361</latitude>
+				<altitude>0</altitude>
+				<heading>1.275466722878723</heading>
+				<tilt>29.83874092674882</tilt>
+				<range>569.4584902832164</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3864263675433,43.44851562431872,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>18#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3850058654176</longitude>
+				<latitude>43.45395339006661</latitude>
+				<altitude>0</altitude>
+				<heading>1.27462204531863</heading>
+				<tilt>30.00128905779947</tilt>
+				<range>287.0018320277691</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3843956535881,43.45362261689111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>19#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3938963981042</longitude>
+				<latitude>43.45852521475668</latitude>
+				<altitude>0</altitude>
+				<heading>1.28070301203129</heading>
+				<tilt>30.00282961522026</tilt>
+				<range>747.2640765608929</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3932676940353,43.45824620181742,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>20#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3882966451007</longitude>
+				<latitude>43.45997902706282</latitude>
+				<altitude>0</altitude>
+				<heading>1.276851341133876</heading>
+				<tilt>30.00282428453103</tilt>
+				<range>746.0772361106823</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3884861206642,43.4598204489385,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>21#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3819380843814</longitude>
+				<latitude>43.46242877501871</latitude>
+				<altitude>0</altitude>
+				<heading>1.272477566147322</heading>
+				<tilt>30.00332926648098</tilt>
+				<range>741.3536841141976</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3808351393696,43.46195566707485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>22#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3778997860702</longitude>
+				<latitude>43.46886744409797</latitude>
+				<altitude>0</altitude>
+				<heading>1.268142352161392</heading>
+				<tilt>30.00341450972223</tilt>
+				<range>760.350574956396</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin110</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3768513200319,43.4683771482395,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>1#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4116719615677</longitude>
+				<latitude>43.44788285878344</latitude>
+				<altitude>0</altitude>
+				<heading>1.291408317189714</heading>
+				<tilt>30.00429598493905</tilt>
+				<range>956.6284120081318</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4116796864516,43.44687927727619,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>2#风机</name>
+			<LookAt>
+				<longitude>123.4092885401019</longitude>
+				<latitude>43.45216963987915</latitude>
+				<altitude>0</altitude>
+				<heading>-0.007195295989450802</heading>
+				<tilt>30.00431992160421</tilt>
+				<range>961.8128303742487</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4071392751757,43.45152068846719,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>3#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4017738089169</longitude>
+				<latitude>43.45310894375567</latitude>
+				<altitude>0</altitude>
+				<heading>1.286121013861186</heading>
+				<tilt>30.00283143812623</tilt>
+				<range>747.6699420897505</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4005867016113,43.45294239478333,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>4#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4060284795677</longitude>
+				<latitude>43.45792002219801</latitude>
+				<altitude>0</altitude>
+				<heading>1.289047432092345</heading>
+				<tilt>30.00286182455103</tilt>
+				<range>754.4352856824562</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4051721395741,43.45791470287557,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>5#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4009776103998</longitude>
+				<latitude>43.46228932532644</latitude>
+				<altitude>0</altitude>
+				<heading>1.287011509150057</heading>
+				<tilt>30.00121324142092</tilt>
+				<range>387.2498100657332</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4000804941234,43.46194879526367,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>6#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3966333920518</longitude>
+				<latitude>43.47047602154344</latitude>
+				<altitude>0</altitude>
+				<heading>1.28258446972132</heading>
+				<tilt>30.00377894446959</tilt>
+				<range>988.0355105278705</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.395448619865,43.46995395175521,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>7#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3897855417393</longitude>
+				<latitude>43.46655384274431</latitude>
+				<altitude>0</altitude>
+				<heading>1.277873263427489</heading>
+				<tilt>30.00374106030612</tilt>
+				<range>979.6009928315294</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3880602158638,43.4669255303042,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>8#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.3871172052798</longitude>
+				<latitude>43.46967515838865</latitude>
+				<altitude>0</altitude>
+				<heading>1.276037704530038</heading>
+				<tilt>30.00375849375517</tilt>
+				<range>983.4824069914794</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.3851052077297,43.46971457790815,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>9#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4074101836534</longitude>
+				<latitude>43.46412090275501</latitude>
+				<altitude>0</altitude>
+				<heading>1.291436411861029</heading>
+				<tilt>30.00123636349526</tilt>
+				<range>392.3981063122321</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4071219825127,43.46398667581154,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>10#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2012-11-08</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.412438817414</longitude>
+				<latitude>43.47025976916125</latitude>
+				<altitude>0</altitude>
+				<heading>1.290714879940772</heading>
+				<tilt>29.65166006192172</tilt>
+				<range>655.3257442065978</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4121571798461,43.46941159527838,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>11#风机</name>
+			<LookAt>
+				<gx:TimeStamp><when>2011-04-20</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4027105237599</longitude>
+				<latitude>43.47278626578031</latitude>
+				<altitude>0</altitude>
+				<heading>1.261266539298395</heading>
+				<tilt>24.37641021374628</tilt>
+				<range>385.7027890671767</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin101</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4022044979626,43.47292127079955,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>移动通信塔</name>
+			<LookAt>
+				<gx:TimeStamp><when>2013-08-29T01:06:55Z</when>
+</gx:TimeStamp>
+				<longitude>123.4380318968401</longitude>
+				<latitude>43.50033593229767</latitude>
+				<altitude>0</altitude>
+				<heading>1.557651725253799</heading>
+				<tilt>18.37120175606619</tilt>
+				<range>178.9720100194662</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin000</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4381222647466,43.50042980067327,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>通信塔</name>
+			<description>联通</description>
+			<LookAt>
+				<longitude>123.4204109901569</longitude>
+				<latitude>43.4527741579051</latitude>
+				<altitude>0</altitude>
+				<heading>0.0004599093535790537</heading>
+				<tilt>30.0013698628201</tilt>
+				<range>422.158433674995</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0000</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.420389690715,43.45214226816666,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>联通电信塔</name>
+			<LookAt>
+				<gx:TimeStamp><when>2018-05-31T02:24:00Z</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>123.4059407700105</longitude>
+				<latitude>43.48672195623323</latitude>
+				<altitude>0</altitude>
+				<heading>-0.007637222150875841</heading>
+				<tilt>30.0024638421866</tilt>
+				<range>548.4941663696808</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin000</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>123.4052828929734,43.48654439723134,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

@@ -1,0 +1,53 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('xmosi/xmlist')}">项目管理</a></li>
+			<li><a href="{:url('xmosi/xmadd')}">项目添加</a></li>
+			<li class="active"><a>编辑风场</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('xmosi/editPost')}">
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>项目名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="itemname" value="{$user.itemname}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>所属设备</label>
+				<div class="col-md-6 col-sm-10">
+					<select name="devicecode">
+						<foreach name="xmlist" item="vo">
+							<option value="{$vo.devicecode}" <if condition="$vo.devicecode eq $user.devicecode">selected = "selected"</if> > {$vo.devicename}</option>
+						</foreach>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>项目类型</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="itemtype" value="{$user.itemtype}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>项目内容及标准</label>
+				<div class="col-md-6 col-sm-10">
+					<div class="col-md-6 col-sm-10">
+						<textarea type="text" class="form-control" id="input-remark" name="iteminfo" >{$user.iteminfo}</textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

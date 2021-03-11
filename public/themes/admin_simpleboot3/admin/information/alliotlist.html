@@ -1,0 +1,94 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:url('alliotlist')}">网关总数据</a></li>
+    </ul>
+        <form class="well form-inline margin-top-20" method="get" action="{:url('alliotlist')}">
+            网关序列号:
+            <input type="text" class="form-control" name="select_gw" style="width: 200px;" value="{:input('request.select_gw/s','')}" placeholder="请输入网关序列号">
+            传感器ID:
+            <input type="text" class="form-control" name="select_sn" style="width: 200px;" value="{:input('request.select_sn/s','')}" placeholder="请输入传感器ID">
+            请选择开始时间:<input type="text" class="layui-input form-control" name="select_start_time" id="test1"  value="{:input('request.select_start_time/s','')}" placeholder="请选择开始时间" style=" width:300px" autocomplete="off">
+            请选择结束时间:<input type="text" class="layui-input form-control" name="select_end_time" id="test2"  value="{:input('request.select_end_time/s','')}" placeholder="请选择结束时间" style=" width:300px" autocomplete="off">
+            <script type="text/javascript">
+                 laydate.render({
+                    elem: '#test1',
+                    type: 'datetime'
+                });
+
+                 laydate.render({
+                    elem: '#test2'
+                    ,type: 'datetime'
+                    ,ready: function(date){
+                    $(".layui-laydate-footer [lay-type='datetime'].laydate-btns-time").click();
+                    $(".laydate-main-list-0 .layui-laydate-content li ol li:last-child").click();
+                    $(".layui-laydate-footer [lay-type='date'].laydate-btns-time").click();
+                    }
+                    });
+
+            </script>
+            <input type="submit" class="btn btn-primary" value="搜索" />
+            <a class="btn btn-danger" href="{:url('alliotlist')}">清空</a>
+        </form>
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th>网关序列号</th>
+                <th>传感器ID</th>
+                <th>服务类型</th>
+                <th>发送网址</th>
+                <th>数值</th>
+                <th>发送时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <foreach name="data" item="vo">
+                <tr>
+                    <td>{$vo['gw_id']}</td>
+                    <td>
+                        {$vo['sn_id']} 
+                        <?php 
+                            $sn_describe = "   (未知)";
+                            $sn_info = explode("-",$vo['sn_id']);
+                            if(isset($sn_info[1])){
+                                switch ($sn_info[1]){
+                                    case '37':
+                                      $sn_describe = "   (机舱内部)";
+                                      break;  
+                                    case 'F9':
+                                       $sn_describe = "   (机舱外部)";
+                                      break;
+                                    case '3D':
+                                       $sn_describe = "   (塔机内部)";
+                                      break;
+                                    case 'FD':
+                                       $sn_describe = "   (塔机外部)";
+                                      break;
+                                    default:
+                                      $sn_describe = "   (未知)";
+                                }
+                            }else{
+                                if($vo['sn_id'] == '192.168.1.244:64000'){
+                                    $sn_describe = "   (主轴外移)";
+                                }
+                            }
+                            echo $sn_describe;
+                        ?>
+                    </td>
+                    <td>{$vo['ST']}</td>
+                    <td>{$vo['ip']}</td>
+                    <td>{$vo['temp']|sprintf='%1\$.4f',###}</td>
+                    <td><?php echo get_microtime_format($vo['create_time'] * 0.001); ?></td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="footer">
+            <div class="pagination">{$page|default=''}</div>
+        </div>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>
